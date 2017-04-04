@@ -19,5 +19,7 @@ filetype plugin indent on
 map <C-e> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" youcompleteme
+let g:ycm_global_ycm_extra_conf ="/Users/ibrahim/.vim/.ycm_extra_conf.py" 
 " change default leader key
 let mapleader = "-"
