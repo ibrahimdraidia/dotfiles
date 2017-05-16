@@ -12,7 +12,15 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
+" react js
+Plugin 'mxw/vim-jsx'
+"Plugin 'vim-react-snippets'
+Plugin 'jbgutierrez/vim-babel'
+Plugin 'mattn/webapi-vim'
 call vundle#end()
+
+" react js jsx syntax
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 filetype plugin indent on
 " nerdtree

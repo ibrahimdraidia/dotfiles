@@ -80,6 +80,7 @@ flags = [
 './tests/gmock',
 '-isystem',
 './tests/gmock/include',
+'/msys64/usr/include/w32api'
 ]
 
 
