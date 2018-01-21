@@ -1,23 +1,32 @@
-syntax on
+" enable syntax highlighting
+syntax enable
+
+filetype indent plugin on
+
+" show line numbers
 set number
-set nocompatible
-set encoding=utf-8
-filetype off
 
+" set tabs to have four spaces
+set ts=4
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-fugitive'
-call vundle#end()
+" indent when moving to the next line while writing code
+set autoindent
 
-filetype plugin indent on
-" nerdtree
-map <C-e> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" expand tabs into spaces
+set expandtab
 
-" change default leader key
-let mapleader = "-"
+" when using >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+
+" show a visual line under the current cursor line
+set cursorline
+
+" show the matching part on the pair for [] {} and ()
+set showmatch
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+
+" set background dark
+highlight Normal guibg=black guifg=white
+set background=dark
