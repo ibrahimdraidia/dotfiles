@@ -1,4 +1,4 @@
-;; remove screen plash
+;; remove splash screen
 (setq inhibit-startup-screen t)
 ;; remove menu bar
 (menu-bar-mode 0)
@@ -7,21 +7,11 @@
 ;; enable ido
 (ido-mode 1)
 (package-initialize)
+;; use elpy for python
 (elpy-enable)
+;; use ubuntu font
 (set-default-font "Ubuntu Mono-14")
+;; enable line numbers
 (global-linum-mode)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (dracula)))
- '(custom-safe-themes
-   (quote
-    ("b97a01622103266c1a26a032567e02d920b2c697ff69d40b7d9956821ab666cc" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; enable evil
+(evil-mode 1)
