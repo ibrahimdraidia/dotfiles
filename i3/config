@@ -16,7 +16,7 @@ set $term urxvt
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -29,7 +29,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
- bindsym $mod+Return exec /usr/bin/urxvt
+bindsym $mod+Return exec /usr/bin/urxvt
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -41,7 +41,7 @@ bindsym $mod+Shift+A kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-font pango:hack 9
+font Ubuntu:size 16
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -177,7 +177,7 @@ bindsym $mod+d			exec rofi -show run
 #bindsym Shift+p			exec bash /home/ibrahim/scripts/screencast.sh
 
 # stop screecast
-bindsym $mod+Shift+p		exec pkill ffmpeg
+#bindsym $mod+Shift+p		exec pkill ffmpeg
 
 # i3-gaps settings 
 hide_edge_borders both
@@ -220,4 +220,3 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
  
 # enable click at touchpad / pad
 exec --no-startup-id synclient TapButton1=1
-
