@@ -1,7 +1,4 @@
 set number
-" Install vim-plug for neovim
-" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
 Plug 'roxma/nvim-completion-manager'
 " Snippets plugins
@@ -20,3 +17,7 @@ Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-rct-complete'
 call plug#end()
 
+" Spell checking 
+" set spell spelllang=en_us
+" Set dictionary
+" set dictionary+=/usr/share/dict/words
