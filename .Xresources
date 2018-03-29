@@ -4,22 +4,33 @@ urxvt*scrollBar: false
 urxvt*clipboard.autocopy: true
 urxvt*font: xft:mono:size=10
 urxvt*transparent: true
-! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+
+! dark violet theme
+
+URxvt*background: #1b1b1b
+URxvt*foreground: #cccaca
+
+!Black
+URxvt*color0: #222222
+URxvt*color8: #5b595a
+!Red
+URxvt*color1: #664742
+URxvt*color9: #664742
+!Green
+URxvt*color2: #A5AF86
+URxvt*color10: #A5AF86
+!Yellow
+URxvt*color3: #F7E7BD
+URxvt*color11: #F7E7BD
+!Blue
+URxvt*color4: #6e686f
+URxvt*color12: #6e686f
+!Magenta
+URxvt*color5: #966E6E
+URxvt*color13: #B09A91
+!Cyan
+URxvt*color6: #849492
+URxvt*color14: #849492
+!White
+URxvt*color7: #a49c9c
+URxvt*color15: #e9e6e6
