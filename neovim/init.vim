@@ -73,6 +73,9 @@ Plug 'roxma/ncm-rct-complete'
 " Haskell
 "Plug 'neovimhaskell/haskell-vim.git'
 Plug 'eagletmt/neco-ghc'
+" javascipt reactjs 
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 " Spell checking 
