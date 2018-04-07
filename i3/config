@@ -168,14 +168,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
+# remove borders from windows
+for_window [class="^.*"] border pixel 0 
+# add gaps 
+gaps inner 10
+gaps outer 5
+smart_gaps on
+smart_borders on
 # Startup applications
 # setup desktop monitors
 exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
 # update .Xresources (urxvt ...)
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/futurama.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.jpg
 # start google-chrome 
 exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/google-chrome'
 # start slack
@@ -199,6 +205,11 @@ assign [class="Code$"] $ws2
 assign [class="Google"] $ws6
 assign [class="Firefox"] $ws8
 
+# key binds
+# start screencast
+bindsym Shift+p exec bash /home/ibrahim/scripts/screencast.sh
+# stop screencast
+bindsym $mod+Shift+p		exec pkill ffmpeg
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
