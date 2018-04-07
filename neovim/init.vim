@@ -41,6 +41,8 @@ let g:necoghc_enable_detailed_browse = 1
 " Manage plugins with Plug
 call plug#begin()
 Plug 'roxma/nvim-completion-manager'
+" Install command-line fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Nerdtree
 Plug 'scrooloose/nerdtree'
 " Nerd commenter
