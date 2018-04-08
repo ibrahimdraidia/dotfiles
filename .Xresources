@@ -3,34 +3,33 @@ urxvt*shading: 30
 urxvt*scrollBar: false
 urxvt*clipboard.autocopy: true
 urxvt*font: xft:mono:size=10
-urxvt*transparent: true
+!urxvt*transparent: true
 
-! dark violet theme
+!light dark
+!black
+URxvt.color0:  #000000
+URxvt.color8:  #2B2B2B
+!red
+URxvt.color1:  #A5372E
+URxvt.color9:  #E06C5C 
+!green
+URxvt.color2:  #4A663C 
+URxvt.color10: #7B996C
+!yellow
+URxvt.color3:  #7C5618
+URxvt.color11: #B38849
+!blue
+URxvt.color4:  #566060
+URxvt.color12: #889393
+!magenta
+URxvt.color5:  #8E4948
+URxvt.color13: #C67C78
+!cyan
+URxvt.color6:  #6D5B42
+URxvt.color14: #A28D73
+!white
+URxvt.color7:  #8D8D8D
+URxvt.color15: #C6C6C6
 
-URxvt*background: #1b1b1b
-URxvt*foreground: #cccaca
-
-!Black
-URxvt*color0: #222222
-URxvt*color8: #5b595a
-!Red
-URxvt*color1: #664742
-URxvt*color9: #664742
-!Green
-URxvt*color2: #A5AF86
-URxvt*color10: #A5AF86
-!Yellow
-URxvt*color3: #F7E7BD
-URxvt*color11: #F7E7BD
-!Blue
-URxvt*color4: #6e686f
-URxvt*color12: #6e686f
-!Magenta
-URxvt*color5: #966E6E
-URxvt*color13: #B09A91
-!Cyan
-URxvt*color6: #849492
-URxvt*color14: #849492
-!White
-URxvt*color7: #a49c9c
-URxvt*color15: #e9e6e6
+urxvt.background: #111111 
+urxvt.foreground: 15
