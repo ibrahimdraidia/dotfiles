@@ -175,7 +175,7 @@ exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
 # update .Xresources (urxvt ...)
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/futurama.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/default.jpg
 # start urxvt
 exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/urxvt'
 # start google-chrome 
