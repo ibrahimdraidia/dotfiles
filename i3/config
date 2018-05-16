@@ -176,12 +176,15 @@ gaps outer 5
 smart_gaps on
 smart_borders on
 # Startup applications
+# set numlock always on
+#exec --no-startup-id xmodmap -e "keycode 77 ="
 # setup desktop monitors
-exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
+#exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
+exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
 # update .Xresources (urxvt ...)
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.png
 # start urxvt
 exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/urxvt'
 # start google-chrome 
@@ -190,17 +193,21 @@ exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/google-chrome'
 exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/slack; workspace $ws7'
 # start vscode
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/code' 
+# set keyboard lqyout to us
+#exec --no-startup-id setxkbmap us
+exec --no-startup-id "setxkbmap -model pc105 -layout fr,us -option grp:alt_shift_toggle"
+#exec --no-startup-id "setxkbmap -model pc105 -layout us, fr"
 
 # Put worspaces on specific monitor
-workspace $ws1 output HDMI-1
-workspace $ws2 output HDMI-1
-workspace $ws3 output HDMI-1
-workspace $ws4 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws7 output HDMI-1
+workspace $ws6 output HDMI-1
 workspace $ws5 output HDMI-1
-workspace $ws6 output VGA-1
-workspace $ws7 output VGA-1
-workspace $ws8 output VGA-1
-workspace $ws9 output VGA-1
+workspace $ws4 output VGA-1
+workspace $ws3 output VGA-1
+workspace $ws2 output VGA-1
+workspace $ws1 output VGA-1
 
 # Put client on specific workspace
 assign [class="Code$"] $ws2

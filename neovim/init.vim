@@ -19,6 +19,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+" disable line too long flake8 python
+let g:syntastic_python_flake8_args="--ignore=E501"
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -35,7 +37,7 @@ vmap a- :Tabularize /-><CR>
 " setup neco-ghc for haskell
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:ycm_semantic_triggers = {'haskell' : ['.']} " enable autocompleions
+let g:ycm_semantic_triggers = {'haskell' : ['.']} " enable autocompletions
 let g:necoghc_enable_detailed_browse = 1
 
 " Manage plugins with Plug
@@ -45,6 +47,7 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Nerdtree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " Nerd commenter
 Plug 'scrooloose/nerdcommenter'
 " Fuzzer file searcher
@@ -78,9 +81,19 @@ Plug 'eagletmt/neco-ghc'
 " javascipt reactjs 
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+" virtualenv for python
+Plug 'jmcantrell/vim-virtualenv'
+" git stuff
+Plug 'airblade/vim-gitgutter' " add diff mark to the left
+Plug 'tpope/vim-fugitive'
+" vim themes
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Spell checking 
 " set spell spelllang=en_us
 " Set dictionary
 " set dictionary+=/usr/share/dict/words
+
+" Dracula theme
+colorscheme dracula
