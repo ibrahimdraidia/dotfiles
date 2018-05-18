@@ -97,3 +97,8 @@ call plug#end()
 
 " Dracula theme
 colorscheme dracula
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
