@@ -40,6 +40,9 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']} " enable autocompletions
 let g:necoghc_enable_detailed_browse = 1
 
+" enable indent plugin
+" let g:indent_guides_enable_on_vim_startup = 1
+
 " Manage plugins with Plug
 call plug#begin()
 Plug 'roxma/nvim-completion-manager'
@@ -88,6 +91,10 @@ Plug 'airblade/vim-gitgutter' " add diff mark to the left
 Plug 'tpope/vim-fugitive'
 " vim themes
 Plug 'dracula/vim', { 'as': 'dracula' }
+" Indent 
+" Plug 'nathanaelkane/vim-indent-guides'
+" indent line
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Spell checking 
