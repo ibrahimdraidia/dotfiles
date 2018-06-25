@@ -184,7 +184,7 @@ exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
 # update .Xresources (urxvt ...)
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.png
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.jpg
 # start urxvt
 exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/urxvt'
 # start google-chrome 
@@ -197,6 +197,8 @@ exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/code'
 #exec --no-startup-id setxkbmap us
 exec --no-startup-id "setxkbmap -model pc105 -layout fr,us -option grp:alt_shift_toggle"
 #exec --no-startup-id "setxkbmap -model pc105 -layout us, fr"
+# run dropbox
+exec --no-startup-id dropbox
 
 # Put worspaces on specific monitor
 workspace $ws1 output HDMI-1
