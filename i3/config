@@ -37,7 +37,9 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec dmenu_run
+# show rofi run
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -192,13 +194,13 @@ exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/google-chrome'
 # start slack
 exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/slack; workspace $ws7'
 # start vscode
-exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/code' 
+# exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/code'
 # set keyboard lqyout to us
 #exec --no-startup-id setxkbmap us
 exec --no-startup-id "setxkbmap -model pc105 -layout fr,us -option grp:alt_shift_toggle"
 #exec --no-startup-id "setxkbmap -model pc105 -layout us, fr"
 # run dropbox
-exec --no-startup-id dropbox
+exec --no-startup-id dropbox start
 
 # Put worspaces on specific monitor
 workspace $ws1 output HDMI-1
