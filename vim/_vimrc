@@ -22,8 +22,6 @@ let g:syntastic_check_on_wq = 1
 " disable line too long flake8 python
 let g:syntastic_python_flake8_args="--ignore=E501"
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
 
 " Nerdtree map
 map <C-e> :NERDTreeToggle<CR>
@@ -50,9 +48,6 @@ let g:necoghc_enable_detailed_browse = 1
 
 " Manage plugins with Plug
 call plug#begin()
-Plug 'roxma/nvim-completion-manager'
-" Install command-line fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -60,8 +55,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 " Fuzzer file searcher
 Plug 'ctrlpvim/ctrlp.vim'
-" Replace neocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Supertab
 Plug 'ervandew/supertab'
 " Tabularize
@@ -90,9 +83,9 @@ Plug 'eagletmt/neco-ghc'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 " virtualenv for python
-"Plug 'jmcantrell/vim-virtualenv'
-"Plug 'davidhalter/jedi-vim'
-Plug 'lambdalisue/vim-pyenv'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'davidhalter/jedi-vim'
+"Plug 'lambdalisue/vim-pyenv'
 " git stuff
 Plug 'airblade/vim-gitgutter' " add diff mark to the left
 Plug 'tpope/vim-fugitive'
