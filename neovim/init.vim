@@ -27,6 +27,8 @@ let g:deoplete#enable_at_startup = 1
 
 " Nerdtree map
 map <C-e> :NERDTreeToggle<CR>
+" nerdtree filter file extensions
+let NERDTreeIgnore = ['\.pyc$']
 
 " Tabularize map
 let g:haskell_tabular = 1
@@ -39,6 +41,9 @@ let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']} " enable autocompletions
 let g:necoghc_enable_detailed_browse = 1
+
+" Set default python interpreter
+" let g:syntastic_python_python_exec = 'python3'
 
 " enable indent plugin
 " let g:indent_guides_enable_on_vim_startup = 1
@@ -85,7 +90,9 @@ Plug 'eagletmt/neco-ghc'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 " virtualenv for python
-Plug 'jmcantrell/vim-virtualenv'
+"Plug 'jmcantrell/vim-virtualenv'
+"Plug 'davidhalter/jedi-vim'
+Plug 'lambdalisue/vim-pyenv'
 " git stuff
 Plug 'airblade/vim-gitgutter' " add diff mark to the left
 Plug 'tpope/vim-fugitive'
