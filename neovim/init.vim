@@ -116,3 +116,9 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Set postgres syntax
+augroup pgsql_ft
+  au!
+  autocmd BufNewFile,BufRead *.pgsql   set syntax=sql
+augroup END

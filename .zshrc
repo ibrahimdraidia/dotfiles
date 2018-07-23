@@ -99,5 +99,12 @@ source $ZSH/oh-my-zsh.sh
 
 # load pyenv
 export PATH="/home/ibrahim/.pyenv/bin:$PATH"
+export PATH="/home/ibrahim/.gem/ruby/2.3.0/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+# enable kubectl autocomplete for zsh
+source <(kubectl completion zsh)
+# enable minikube autocomplete for zsh
+source <(minikube completion zsh)
+# enable kops autocomplete for zsh
+source <(kops completion zsh)
