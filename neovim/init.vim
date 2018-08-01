@@ -126,7 +126,7 @@ augroup END
 " Set tab == 2 spaces for yml files
 augroup yml_ft
   au!
-  autocmd BufNewFile,BufRead *.yml call s:circle_yaml()
+  autocmd BufNewFile,BufRead *.yml, *.yaml call s:circle_yaml()
   function! s:circle_yaml()
     set tabstop=2                   "A tab is 2 spaces
     set expandtab                   "Always uses spaces instead of tabs
