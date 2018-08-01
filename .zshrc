@@ -108,3 +108,4 @@ source <(kubectl completion zsh)
 source <(minikube completion zsh)
 # enable kops autocomplete for zsh
 source <(kops completion zsh)
+export PATH="$PATH:/opt/mssql-tools/bin"
