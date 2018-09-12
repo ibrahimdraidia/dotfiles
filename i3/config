@@ -188,7 +188,7 @@ exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/default.jpg
 # start urxvt
-exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/urxvt'
+exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/urxvt -cd "$HOME/workplace"'
 # start google-chrome 
 exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/google-chrome'
 # start slack
