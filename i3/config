@@ -46,8 +46,8 @@ bindsym $mod+d exec rofi -show run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # monitors office
-set $DELL VGA-1
-set $IIYAMA HDMI-1
+set $IIYAMA1 HDMI-1
+set $IIYAMA2 VGA-1
 
 # change focus
 bindsym $mod+j focus left
@@ -182,7 +182,10 @@ smart_borders on
 #exec --no-startup-id xmodmap -e "keycode 77 ="
 # setup desktop monitors
 #exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
-exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
+# exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
+exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
+# start network manager
+# exec --no-startup-id nm-applet
 # update .Xresources (urxvt ...)
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # set background wallpaper
