@@ -1,0 +1,95 @@
+" Default 
+syntax on
+filetype plugin indent on
+set number
+
+" Tab specific option
+set tabstop=8                   "A tab is 8 spaces
+set expandtab                   "Always uses spaces instead of tabs
+set softtabstop=4               "Insert 4 spaces when tab is pressed
+set shiftwidth=4                "An indent is 4 spaces
+set shiftround                  "Round indent to nearest shiftwidth multiple
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+" disable line too long flake8 python
+let g:syntastic_python_flake8_args="--ignore=E501"
+
+
+" Nerdtree map
+map <C-e> :NERDTreeToggle<CR>
+" nerdtree filter file extensions
+let NERDTreeIgnore = ['\.pyc$']
+
+" Manage plugins with Plug
+call plug#begin()
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Nerd commenter
+Plug 'scrooloose/nerdcommenter'
+" Fuzzer file searcher
+Plug 'ctrlpvim/ctrlp.vim'
+" Supertab
+Plug 'ervandew/supertab'
+" Tabularize
+Plug 'godlygeek/tabular'
+" Snippets plugins
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" vimproc
+Plug 'Shougo/vimproc.vim'
+" syntastic
+Plug 'vim-syntastic/syntastic'
+" Ruby lang
+Plug 'roxma/ncm-rct-complete'
+" git stuff
+Plug 'airblade/vim-gitgutter' " add diff mark to the left
+Plug 'tpope/vim-fugitive'
+" vim themes
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Indent 
+" Plug 'nathanaelkane/vim-indent-guides'
+" indent line
+Plug 'Yggdroot/indentLine'
+call plug#end()
+
+" Spell checking 
+" set spell spelllang=en_us
+" Set dictionary
+" set dictionary+=/usr/share/dict/words
+
+" Dracula theme
+colorscheme dracula
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Set postgres syntax
+augroup pgsql_ft
+  au!
+  autocmd BufNewFile,BufRead *.pgsql   set syntax=sql
+augroup END
+
+" Set tab == 2 spaces for yml files
+augroup yml_ft
+  au!
+  autocmd BufNewFile,BufRead *.yml call s:circle_yaml()
+  autocmd BufNewFile,BufRead *.yaml call s:circle_yaml()
+  function! s:circle_yaml()
+    set tabstop=2                   "A tab is 2 spaces
+    set expandtab                   "Always uses spaces instead of tabs
+    set softtabstop=2               "Insert 2 spaces when tab is pressed
+    set shiftwidth=2                "An indent is 2 spaces
+    set shiftround                  "Round indent to nearest shiftwidth multiple
+  endfunction
+augroup END
