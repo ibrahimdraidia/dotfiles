@@ -7,7 +7,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -64,6 +65,7 @@ plugins=(
   python
   vi-mode
   web-search
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,8 +96,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias sshconfig="vim ~/.ssh/config"
+alias syncrds="ssh prod-utils '/home/ubuntu/sync_with_old_rds.sh'"
+alias dotf="cd ~/dotfiles"
+alias printme="lpr -P canon_c225"
+
 
 # load pyenv
 export PATH="/home/ibrahim/.pyenv/bin:$PATH"
