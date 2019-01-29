@@ -52,7 +52,7 @@ let g:necoghc_enable_detailed_browse = 1
 call plug#begin()
 Plug 'roxma/nvim-completion-manager'
 " Install command-line fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -97,7 +97,7 @@ Plug 'lambdalisue/vim-pyenv'
 Plug 'airblade/vim-gitgutter' " add diff mark to the left
 Plug 'tpope/vim-fugitive'
 " vim themes
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 " Indent 
 " Plug 'nathanaelkane/vim-indent-guides'
 " indent line
@@ -110,7 +110,7 @@ call plug#end()
 " set dictionary+=/usr/share/dict/words
 
 " Dracula theme
-colorscheme dracula
+" colorscheme dracula
 " disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
